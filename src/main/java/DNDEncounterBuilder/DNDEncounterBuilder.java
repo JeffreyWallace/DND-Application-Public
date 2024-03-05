@@ -38,6 +38,10 @@ import java.util.concurrent.CountDownLatch;
 //used to remove files after deletion
 import java.nio.file.*;
 
+
+
+// to-DO
+//change DNDShowStatblock to require a sourcebooks as well!
 /** This class controls The Graphical User Interface of the DND Encounter Builder*/
 public class DNDEncounterBuilder extends Application
 {
@@ -51,7 +55,7 @@ public class DNDEncounterBuilder extends Application
    private VBox vBox;
    private GridPane addMonsterDisplay,gridpane,gridpaneFilters, monstersInEncounterGridpane;
    private ArrayList<String> monsterNamesLst,monstersInEncounterLst,encounterNamesUnqiue;
-   private ArrayList<Integer> amountofMonsters;
+   private ArrayList<Integer> amountofMonsters;//is the amount of monsters for each unique name
    private int displayAmount=10;
    private HBox root;
    private ScrollPane DisplayscrollPane,DisplayscrollPane2,monsterInEncounterScrollPane;
@@ -358,9 +362,7 @@ public class DNDEncounterBuilder extends Application
       {
       loadDataFromEncounter(encounterNameLoad);
       }
-      
-      
-      
+
       //code for making enter search work
       
       scene.setOnKeyPressed(ev ->
@@ -412,7 +414,9 @@ public class DNDEncounterBuilder extends Application
                   //sql querry encounterNamesUnqiue
                   
                   String query="";
-                  
+
+                  //loops through the list of unique names to get the total experience from each
+                  //monster then multiply that by the amount of that unique monsters
                   ResultSet rsBooks = stmt.executeQuery("SELECT Experience FROM Monster where monsterName='"+encounterNamesUnqiue.get(i)+"'");
                   while(rsBooks.next())
                   {
@@ -530,8 +534,7 @@ public class DNDEncounterBuilder extends Application
          addMonsterDisplay.add(spaceLbl,0,1);
          ArrayList<String> uniqueNames=new ArrayList();
          ArrayList<Integer> Total=new ArrayList();
-         
-         
+
          //makes a set of unique names from the list passed in
          for(int i=0;i<lst.size();i++)
          {
@@ -546,10 +549,7 @@ public class DNDEncounterBuilder extends Application
             }
          
          }
-         
-         
-         
-         
+
          //display 
          for(int i=0;i<uniqueNames.size();i++)
          {
@@ -557,7 +557,7 @@ public class DNDEncounterBuilder extends Application
                monstersInEncounterGridpane.add(spaceLbl,0,i*2+1);
                //System.out.println(result);
                //Monster information Label
-               Label lbl=new Label(uniqueNames.get(i));
+               Label lbl=new Label(uniqueNames.get(i).substring(0,uniqueNames.get(i).indexOf("...")));
                Label amount=new Label(" "+Total.get(i)+" ");
                lbl.setPadding(new Insets(10, 10, 10, 10));
                lbl.setFont(Font.font("monospaced", 11));
@@ -592,6 +592,8 @@ public class DNDEncounterBuilder extends Application
                
          }     
          encounterNamesUnqiue=uniqueNames;
+         //sets the amount of monsters list to the Total list which counts the amount
+         //of names in the names list and totals them by unique names
          amountofMonsters=Total;
          
          //monsterInEncounterScrollPane.add(monstersInEncounterGridpane);
@@ -667,7 +669,10 @@ public class DNDEncounterBuilder extends Application
                // Iterate over the columns in the row
                //adds labes for each monster in the querry
                String result="";
-               monsterNamesLst.add(rs.getString(1));
+               monsterNamesLst.add(rs.getString(1)+"..."+rs.getString(6));
+
+               //source books System.out.println("rsc5"+rs.getString(6));
+
                for (int i = 1; i <= columnsNumber; i++) 
                {
                   String columnValue = rs.getString(i);
@@ -791,9 +796,11 @@ public class DNDEncounterBuilder extends Application
             if(source==ShowStatblockBL.get(i))
             {
             //write code to add monster to encounter
-            DNDShowStatblock newStatblock = new DNDShowStatblock(url,user,password,monsterNamesLst.get(i));
-            Stage stage2 = new Stage();
-            newStatblock.start(stage2);
+               String mName=monsterNamesLst.get(i).substring(0,monsterNamesLst.get(i).indexOf("..."));
+               String mStatblock=monsterNamesLst.get(i).substring(monsterNamesLst.get(i).indexOf("...")+3);
+               DNDShowStatblock newStatblock = new DNDShowStatblock(url,user,password,mName,mStatblock);
+               Stage stage2 = new Stage();
+               newStatblock.start(stage2);
             }
          }
       }
@@ -809,9 +816,11 @@ public class DNDEncounterBuilder extends Application
          {
             
             if(source==showStatblockEncounterBL.get(i))
-            { 
-            DNDShowStatblock newStatblock = new DNDShowStatblock(url,user,password,encounterNamesUnqiue.get(i));
-            Stage stage2 = new Stage();
+            {
+               String mName=encounterNamesUnqiue.get(i).substring(0,encounterNamesUnqiue.get(i).indexOf("..."));
+               String mStatblock=encounterNamesUnqiue.get(i).substring(encounterNamesUnqiue.get(i).indexOf("...")+3);
+               DNDShowStatblock newStatblock = new DNDShowStatblock(url,user,password,mName,mStatblock);
+               Stage stage2 = new Stage();
             newStatblock.start(stage2);
             }
          }
@@ -1036,6 +1045,8 @@ public class DNDEncounterBuilder extends Application
 
       for(int i=0;i<encounterNamesUnqiue.size();i++)
       {
+
+         //we need to change how we select the sourcebook see create encounter for how
          String sourcebook="";
          ResultSet rs =stmt.executeQuery("SELECT SourceBook FROM MONSTER WHERE MonsterName = '" + encounterNamesUnqiue.get(i) + "'");
          if (rs.next()) 
@@ -1048,6 +1059,7 @@ public class DNDEncounterBuilder extends Application
          pstmt.setString(1, encounterNamesUnqiue.get(i));
          pstmt.setString(2, sourcebook);
          pstmt.setString(3, encounterName.getText());
+         //the line below is confusing me does it just set the amount of monsters to the total amount???
          pstmt.setInt(4, amountofMonsters.get(i));
          pstmt.executeUpdate();
          try {
@@ -1126,20 +1138,18 @@ public class DNDEncounterBuilder extends Application
             // Insert into APPEARS table
             
             
-            
+            // thise loops throught the list of unique encounter names and adds them to the encounter with the amount
+            //of times that they appear in the
             for(int i=0;i<encounterNamesUnqiue.size();i++)
             {
-               String sourcebook="";
-               ResultSet rs =stmt.executeQuery("SELECT SourceBook FROM MONSTER WHERE MonsterName = '" + encounterNamesUnqiue.get(i) + "'");
-               if (rs.next()) 
-               {
-                  sourcebook = rs.getString("SourceBook");
-               }
+               //we need to change how we select sourcebook
                sql = "INSERT INTO APPEARS (MonsterName, SourceBook, EncounterName, Amount) VALUES (?, ?, ?, ?)";
-               sqlPop = "INSERT INTO APPEARS (MonsterName, SourceBook, EncounterName, Amount) VALUES ('" + encounterNamesUnqiue.get(i) + "', '" + sourcebook + "', '" + encounterName.getText() + "', " + amountofMonsters.get(i) + ")";
+               String name=encounterNamesUnqiue.get(i).substring(0,encounterNamesUnqiue.get(i).indexOf("..."));
+               String sourceBook=encounterNamesUnqiue.get(i).substring(encounterNamesUnqiue.get(i).indexOf("...")+3);
+               sqlPop = "INSERT INTO APPEARS (MonsterName, SourceBook, EncounterName, Amount) VALUES ('" + name + "', '" + sourceBook + "', '" + encounterName.getText() + "', " + amountofMonsters.get(i) + ")";
                pstmt = connection.prepareStatement(sql);
-               pstmt.setString(1, encounterNamesUnqiue.get(i));
-               pstmt.setString(2, sourcebook);
+               pstmt.setString(1, name );
+               pstmt.setString(2,sourceBook );
                pstmt.setString(3, encounterName.getText());
                pstmt.setInt(4, amountofMonsters.get(i));
                pstmt.executeUpdate();
@@ -1196,14 +1206,17 @@ public class DNDEncounterBuilder extends Application
       Statement stmt1 = connection.createStatement();
       Statement stmt2 = connection.createStatement();
       //stmt.execute("USE DndEncounters");
-      ResultSet rs = stmt.executeQuery("Select MonsterName,amount  from appears where EncounterName='"+encounterNameToLoad+"'");
+
+      //we need to change how we find the sourcebook
+      ResultSet rs = stmt.executeQuery("Select MonsterName,amount,SourceBook  from appears where EncounterName='"+encounterNameToLoad+"'");
       while(rs.next())
       {
          String monsterName = rs.getString("MonsterName");
+         String sourceBook = rs.getString("SourceBook");
          int amount = rs.getInt("amount");
          for(int i=0;i<amount;i++)
          {
-         monstersInEncounterLst.add(monsterName);
+         monstersInEncounterLst.add(monsterName+"..."+sourceBook);
          }
       }
       ResultSet rs1 = stmt.executeQuery("Select playerLevel,playerAmount  from encounter where EncounterName='"+encounterNameToLoad+"'");

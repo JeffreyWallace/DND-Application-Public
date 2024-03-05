@@ -32,7 +32,7 @@ public class DNDShowStatblock extends Application
    private String user="root";
    private String password="";
    private String monsterName;
-   
+   private String sourcebook;
    private int height=800;
    private int width=510;
    
@@ -40,12 +40,13 @@ public class DNDShowStatblock extends Application
    public DNDShowStatblock()
    {}
    
-   public DNDShowStatblock(String urlIn,String userIn,String passwordIn,String mName)
+   public DNDShowStatblock(String urlIn,String userIn,String passwordIn,String mName,String mSourceBook)
    {
    url=urlIn;
    user=userIn;
    password=passwordIn;
    monsterName=mName;
+   sourcebook=mSourceBook;
    }
     /**
     *Initalizes the gui
@@ -58,9 +59,13 @@ public class DNDShowStatblock extends Application
       Class.forName("com.mysql.jdbc.Driver");
       connection = DriverManager.getConnection(url, user, password);
       Statement stmt = connection.createStatement();
-      stmt.execute("USE DndEncounters");
-      ResultSet rs = stmt.executeQuery("Select Statblock from Monster where MonsterName='"+monsterName+"'");
-      rs.next();
+         stmt.execute("USE DndEncounters");
+         String query = "SELECT Statblock FROM Monster WHERE MonsterName = ? AND Sourcebook = ?";
+         PreparedStatement pstmt = connection.prepareStatement(query);
+         pstmt.setString(1, monsterName);
+         pstmt.setString(2, sourcebook);
+         ResultSet rs = pstmt.executeQuery();
+         rs.next();
       String statBlock = rs.getString(1);
       MonsterDescription=new TextArea(statBlock);
       MonsterDescription.setPrefHeight(height);

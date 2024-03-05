@@ -20,8 +20,6 @@ enter your password for mysql
 
 If you ever fail to connect to the database after initilization check your services and make sure mysql is running
 
-Caution when adding monsters that have duplicate names if you do this the program will break it is a wip bug to be fixed
-For now change the duplicate monster name to something else such as goblin-Multiverse
 
 gradle run -launches all of the applications at the same time
 gradle hp -launches the hp tacker application
