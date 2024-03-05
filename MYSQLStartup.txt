@@ -1,0 +1,40 @@
+CREATE DATABASE DndEncounters;
+USE DndEncounters;
+
+CREATE TABLE MONSTER (
+	MonsterName VARCHAR(255),
+	CreatureType VARCHAR(255),
+	Size VARCHAR(255),
+	ChallengeRating FLOAT,
+	Alignment VARCHAR(255),
+	Sourcebook VARCHAR(255),
+	Experience INT,
+	HitPoints INT,
+	ArmorClass INT,
+	Strength INT,
+	Dexterity INT,
+	Constitution INT,
+	Intelligence INT,
+	Wisdom INT,
+	Charisma INT,
+	Statblock VARCHAR(8000),
+    Primary Key(MonsterName,Sourcebook)
+);
+
+CREATE TABLE ENCOUNTER (
+	EncounterName VARCHAR(255) PRIMARY KEY,
+    playerLevel INT,
+    playerAmount INT
+);
+
+
+
+CREATE TABLE APPEARS (
+	MonsterName VARCHAR(255),
+	SourceBook VARCHAR(255),
+	EncounterName VARCHAR(255),
+    Amount int,
+	PRIMARY KEY (MonsterName, Sourcebook, EncounterName),
+	FOREIGN KEY (MonsterName, Sourcebook) REFERENCES MONSTER (MonsterName, Sourcebook),
+	FOREIGN KEY (EncounterName) REFERENCES ENCOUNTER (EncounterName) ON DELETE CASCADE
+);

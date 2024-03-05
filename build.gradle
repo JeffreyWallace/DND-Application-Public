@@ -1,0 +1,57 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'mysql:mysql-connector-java:8.0.23'
+
+}
+
+javafx {
+    version = "21"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+mainClassName = 'DND_App.DNDApplicationLaunch'
+task hp(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'DND_HP_Program.DNDHPLauncher'
+    doFirst {
+        jvmArgs = [
+                '--module-path', classpath.asPath,
+                '--add-modules', 'javafx.controls,javafx.fxml'
+        ]
+    }
+}
+task weather(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'DND_Weather_Generator.DNDWeatherGenerator'
+    doFirst {
+        jvmArgs = [
+                '--module-path', classpath.asPath,
+                '--add-modules', 'javafx.controls,javafx.fxml'
+        ]
+    }
+}
+task encounter(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'DNDSQLLauncher.DNDSQLApplication'
+    doFirst {
+        jvmArgs = [
+                '--module-path', classpath.asPath,
+                '--add-modules', 'javafx.controls,javafx.fxml'
+        ]
+    }
+}
+
+compileJava {
+    options.compilerArgs += [ '--module-path', classpath.asPath ]
+}
+

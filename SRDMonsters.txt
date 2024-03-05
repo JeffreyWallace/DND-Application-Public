@@ -1,0 +1,534 @@
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Awakened shrub','Plant','Small',0,'Unaligned','Monster manual',10,10,9
+,3,8,11,10,10,6,'AWAKENED SHRUB
+Small plant unaligned
+Armor Class 9
+Hit Points 10 (3d6)
+Speed 20 ft.
+STR 3 (-4) DEX 8 (-1) CON 11 (+0) INT 10 (+0) WIS 10 (+0) CHA 6 (-2)
+Damage Vulnerabilities fire
+Damage Resistances piercing
+Senses passive Perception 10
+Languages one language known by its creator
+Challenge 0 (10 XP)
+False Appearance. While the shrub remains motionless it is indistinguishable from a normal 
+shrub.
+ACTIONS
+Rake. Melee Weapon Attack: +1 to hit reach 5 ft. one target.
+Hit: 1 (1d4 - 1) slashing damage.
+An awakened shrub is an ordinary shrub given sentience and mobility by the awaken spell or 
+similar magic.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Baboon','Beast','Small',0,'Unaligned','Monster manual',10,3,12
+,8,14,11,4,12,6,'BABOON
+Small beast unaligned
+Armor Class 12
+Hit Points 3 (1d6)
+Speed 30 ft. climb 30 ft.
+STR 8 (-1) DEX 14 (+2) CON 11 (+0) INT 4 (-3) WIS 12 (+1) CHA 6 (-2)
+Senses passive Perception 11
+Languages
+Challenge 0 (10 XP)
+Pack Tactics. The baboon has advantage on an attack roll against a creature if at least 
+one of the baboons allies is within 5 feet of the creature and the ally isnt incapacitated.
+ACTIONS
+Bite. Melee Weapon Attack: +1 to hit reach 5 ft. one target.
+Hit: 1 (1d4 - 1) piercing damage.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Badger','Beast','Tiny',0,'Unaligned','Monster manual',10,3,10
+,4,11,12,2,12,5,'BADGER
+Tiny beast unaligned
+Armor Class 10
+Hit Points 3 (1d4 + 1)
+Speed 20 ft. burrow 5 ft.
+STR 4 (-3) DEX 11 (+0) CON 12 (+1) INT 2 (-4) WIS 12 (+1) CHA 5 (-3)
+Senses darkvision 30 ft. passive Perception 11
+Languages
+Challenge 0 (10 XP)
+Keen Smell. The badger has advantage on Wisdom (Perception) checks that rely on smell.
+ACTIONS
+Bite. Melee Weapon Attack: +2 to hit reach 5 ft. one target.
+Hit: 1 piercing damage.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Bat','Beast','Tiny',0,'Unaligned','Monster manual',10,1,12
+,2,15,8,2,12,4,'BAT
+Tiny beast unaligned
+Armor Class 12
+Hit Points 1 (1d4 - 1)
+Speed 5 ft. fly 30 ft.
+STR 2 (-4) DEX 15 (+2) CON 8 (-1) INT 2 (-4) WIS 12 (+1) CHA 4 (-3)
+Senses blindsight 60 ft. passive Perception 11
+Languages —
+Challenge 0 (10 XP)
+Echolocation. The bat cant use its blindsight while deafened.
+Keen Hearing. The bat has advantage on Wisdom (Perception) checks that rely on hearing.
+APPENDIX A: MISCELLANEOUS CREATURES
+318
+ACTIONS
+Bite. Melee Weapon Attack: +0 to hit reach 5 ft. one creature.
+Hit: 1 piercing damage.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Cat','Beast','Tiny',0,'Unaligned','Monster manual',10,2,12
+,3,15,10,3,12,7,'CAT
+Tiny beast unaligned
+Armor Class 12
+Hit Points 2 (1d4)
+Speed 40 ft. climb 30 ft.
+STR 3 (-4) DEX 15 (+2) CON 10 (+0) INT 3 (-4) WIS 12 (+1) CHA 7 (-2)
+Skills Perception +3 Stealth +4
+Senses passive Perception 13
+Languages
+Challenge 0 (10 XP)
+Keen Smell. The cat has advantage on Wisdom (Perception) checks that rely on smell.
+ACTIONS
+Claws. Melee Weapon Attack: +0 to hit reach 5 ft. one target.
+Hit: 1 slashing damage.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Commoner','Humanoid','Medium',0,'Unaligned','Monster manual',10,4,10
+,10,10,10,10,10,10,'COMMONER
+Medium humanoid (any race) any alignment
+Armor Class 10
+Hit Points 4 (1d8)
+Speed 30 ft.
+STR 10 (+0) DEX 10 (+0) CON 10 (+0) INT 10 (+0) WIS 10 (+0) CHA 10 (+0)
+Senses passive Perception 10
+Languages any one language (usually Common)
+Challenge 0 (10 XP)
+ACTIONS
+Club. Melee Weapon Attack: +2 to hit reach 5 ft. one target.
+Hit: 2 (1d4) bludgeoning damage.
+Commoners include peasants serfs slaves servants pilgrims merchants artisans and hermits.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Crab','Beast','Tiny',0,'Unaligned','Monster manual',10,2,11,2,11,10,1,8,2,'CRAB
+Tiny beast unaligned
+Armor Class 11 (natural armor)
+Hit Points 2 (1d4)
+Speed 20 ft. swim 20 ft.
+STR 2 (-4) DEX 11 (+0) CON 10 (+0) INT 1 (-5) WIS 8 (-1) CHA 2 (-4)
+Skills Stealth +2
+Senses blindsight 30 ft. passive Perception 9
+Languages
+Challenge 0 (10 XP)
+Amphibious. The crab can breathe air and water.
+ACTIONS
+Claw. Melee Weapon Attack: +0 to hit reach 5 ft. one target.
+Hit: 1 bludgeoning damage.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Deer','Beast','Medium',0,'Unaligned','Monster manual',10,4,13
+,11,16,11,2,14,5,'DEER
+Medium beast unaligned
+Armor Class 13
+Hit Points 4 (1d8)
+Speed 50 ft.
+STR 11 (+0) DEX 16 (+3) CON 11 (+0) INT 2 (-4) WIS 14 (+2) CHA 5 (-3)
+Senses passive Perception 12
+Languages
+Challenge 0 (10 XP)
+ACTIONS
+Bite. Melee Weapon Attack: +2 to hit reach 5 ft. one target.
+Hit: 2 (1d4) piercing damage.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Eagle','Beast','Small',0,'Unaligned','Monster manual',10,3,12
+,6,15,10,2,14,7,'EAGLE
+Small beast unaligned
+Armor Class 12
+Hit Points 3 (1d6)
+Speed 10 ft. fly 60 ft.
+STR 6 (-2) DEX 15 (+2) CON 10 (+0) INT 2 (-4) WIS 14 (+2) CHA 7 (-2)
+Skills Perception +4
+Senses passive Perception 14
+Languages
+Challenge 0 (10 XP)
+Keen Sight. The eagle has advantage on Wisdom (Perception) checks that rely on sight.
+ACTIONS
+Talons. Melee Weapon Attack: +4 to hit reach 5 ft. one target.
+Hit: 4 (1d4 + 2) slashing damage.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Frog','Beast','Tiny',0,'Unaligned','Monster manual',0,1,11
+,1,13,8,1,8,3,'FROG
+Tiny beast unaligned
+Armor Class 11
+Hit Points 1 (1d4 - 1)
+Speed 20 ft. swim 20 ft.
+STR 1(-5) DEX 13 (+1) CON 8 (-1) INT 1(-5) WIS 8(-1) CHA 3 (-4)
+Skills Perception +1 Stealth +3
+Senses darkvision 30 ft. passive Perception 11
+Languages
+Challenge 0 (0 XP)
+Amphibious. The frog can breathe air and water.
+Standing Leap. The frogs long jump is up to 10 feet and its high jump is up to 5 feet with 
+or without a running start.
+A frog has no effective attacks. It feeds on small insects and typically dwells near water 
+in trees or underground. The frogs statistics can also be used to represent a toad
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Giant fire beetle','Beast','Small',0,'Unaligned','Monster manual',10,4,13,8,10,12,1,7,3,'GIANT FIRE BEETLE
+Small beast unaligned
+Armor Class 13 (natural armor)
+Hit Points 4 (1d6 + 1)
+Speed 30 ft.
+STR 8 (-1) DEX 10 (+0) CON 12 (+1) INT 1 (-5) WIS 7 (-2) CHA 3 (-4)
+Senses blindsight 30 ft. passive Perception 8
+Languages •
+Challenge 0 (10 XP)
+Illumination. The beetle sheds bright light in a 10-foot radius and dim light for an 
+additional 10 feet.
+ACTIONS
+Bite. Melee Weapon Attack: +1 to hit reach 5 ft. one target.
+Hit: 2 (1d6 - 1) slashing damage.
+A giant fire beetle is a nocturnal creature that takes its name from a pair of glowing 
+glands that give off light.
+Miners and adventurers prize these creatures for a giant fire beetles glands continue to 
+shed light for 1d6 days after the beetle dies. Giant fire beetles are most commonly found 
+underground and in dark forests.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Goat','Beast','Medium',0,'Unaligned','Monster manual',10,4,10
+,12,10,11,2,10,5,'GOAT
+Medium beast unaligned
+Armor Class 10
+Hit Points 4 (1d8)
+Speed 40 ft.
+STR 12 (+1) DEX 10 (+0) CON 11 (+0) INT 2 (-4) WIS 10 (+0) CHA 5 (-3)
+Senses passive Perception 10
+Languages —
+Challenge 0 (10 XP)
+Charge. If the goat moves at least 20 feet straight toward a target and then hits it with 
+a ram attack on the same turn the target takes an extra 2 (1d4) bludgeoning damage. If the 
+target is a creature it must succeed on a DC 10 Strength saving throw or be knocked prone.
+Sure-Footed. The goat has advantage on Strength and Dexterity saving throws made against 
+effects that would knock it prone.
+ACTIONS
+Ram. Melee Weapon Attack: +3 to hit reach 5 ft. one target.
+Hit: 3 (1d4 + 1) bludgeoning damage.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Hawk','Beast','Tiny',0,'Unaligned','Monster manual',10,1,13
+,5,16,8,2,14,6,'HAWK
+Tiny beast unaligned
+Armor Class 13
+Hit Points 1 (1d4 - 1)
+Speed 10 ft. fly 60 ft.
+STR 5 (-3) DEX 16 (+3) CON 8 (-1) INT 2(-4) WIS 14 (+2) CHA 6 (-2)
+Skills Perception +4
+Senses passive Perception 14
+Languages
+Challenge 0 (10 XP)
+Keen Sight. The hawk has advantage on Wisdom (Perception) checks that rely on sight.
+ACTIONS
+Talons. Melee Weapon Attack: +5 to hit reach 5 ft. one target.
+Hit: 1 slashing damage.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Homunculus','Construct','Tiny',0,'True Neutral','Monster manual',10,5,13,4,15,11,10,10,7,'HOMUNCULUS
+Tiny construct neutral
+Armor Class 13 (natural armor)
+Hit Points 5 (2d4)
+Speed 20 ft. fly 40 ft.
+STR 4 (-3) DEX 15 (+2) CON 11 (+0) INT 10 (+0)  WIS 10 (+0) CHA 7 (-2)
+Damage Immunities poison
+Condition Immunities charmed poisoned
+Senses darkvision 60 ft. passive Perception 10
+Languages understands the languages of its creator but cant speak
+Challenge 0 (10 XP)
+Telepathic Bond. While the homunculus is on the same plane of existence as its master it 
+can magically convey what it senses to its master and the two can communicate 
+telepathically.
+ACTIONS
+Bite. Melee Weapon Attack: +4 to hit reach 5 ft. one creature.
+Hit: 1 piercing damage and the target must succeed on a DC 10 Constitution saving throw or 
+be poisoned for 1 minute. If the saving throw fails by 5 or more the target is instead 
+poisoned for 5 (1d10) minutes and unconscious while poisoned in this way.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Hyena','Beast','Medium',0,'Unaligned','Monster manual',10,5,11
+,11,13,12,2,12,5,'HYENA
+Medium beast unaligned
+Armor Class 11
+Hit Points 5 (1d8 + 1)
+Speed 50 ft.
+STR 11 (+0) DEX 13 (+1) CON 12 (+1) INT 2 (-4) WIS 12 (+1) CHA 5 (-3)
+Skills Perception +3
+Senses passive Perception 13
+Languages —
+Challenge 0 (10 XP)
+Pack Tactics. The hyena has advantage on an attack roll against a creature if at least one 
+of the hyenas allies is within 5 feet of the creature and the ally isnt incapacitated.
+ACTIONS
+Bite. Melee Weapon Attack: +2 to hit reach 5 ft. one target.
+Hit: 3 (1d6) piercing damage.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Jackal','Beast','Small',0,'Unaligned','Monster manual',10,3,12
+,8,15,11,3,12,6,'JACKAL
+Small beast unaligned
+Armor Class 12
+Hit Points 3 (1d6)
+Speed 40 ft.
+STR 8 (-1) DEX 15 (+2) CON 11 (+0) INT 3 (-4) WIS 12 (+1) CHA 6 (-2)
+Skills Perception +3
+Senses passive Perception 13
+Languages
+Challenge 0 (10 XP)
+Keen Hearing and Smell. The jackal has advantage on Wisdom (Perception) checks that rely 
+on hearing or smell.
+Pack Tactics. The jackal has advantage on an attack roll against a creature if at least 
+one of the jackals allies is within 5 feet of the creature and the ally isnt incapacitated.
+ACTIONS
+Bite. Melee Weapon Attack: +1 to hit reach 5 ft. one target.
+Hit: 1 (1d4 - 1) piercing damage.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Lemure','Fiend','Medium',0,'Lawful Evil','Monster manual',10,13,7,10,5,11,1,11,3,'LEMURE
+Medium fiend (devil) lawful evil
+Armor Class 7
+Hit Points 13 (3d8)
+Speed 15 ft.
+STR 10 (+0) DEX 5 (-3) CON 11 (+0) INT 1(-5) WIS 11 (+0) CHA c3 (-4)
+Damage Resistances cold
+Damage Immunities fire poison
+Condition Immunities charmed frightened poisoned
+Senses darkvision 120 ft. passive Perception 10
+Languages understands Infernal but cant speak
+Challenge 0 (10 XP)
+Devils Sight. Magical darkness doesnt impede the lemures darkvision.
+Hellish Rejuvenation. A lemure that dies in the Nine Hells comes back to life with all its 
+hit points in 1d10 days unless it is killed by a good-aligned creature with a bless spell 
+cast on that creature or its remains are sprinkled with holy water.
+ACTIONS
+Fist. Melee Weapon Attack: +3 to hit reach 5 ft. one target. Hit:
+2 (1d4) bludgeoning damage.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Lizard','Beast','Tiny',0,'Unaligned','Monster manual',10,2,10
+,2,11,10,1,8,3,'LIZARD
+Tiny beast unaligned
+Armor Class 10
+Hit Points 2 (1d4)
+Speed 20 ft. climb 20 ft.
+STR 2 (-4) DEX 11 (+0) CON 10 (+0) INT 1(-5) WIS 8 (-1) CHA 3 (-4)
+Senses darkvision 30 ft. passive Perception 9
+Languages -
+Challenge 0 (10 XP)
+ACTIONS
+Bite. Melee Weapon Attack: +0 to hit reach 5 ft. one target.
+Hit: 1 piercing damage.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Octopus','Beast','Small',0,'Unaligned','Monster manual',10,3,12
+,4,15,11,3,10,4,'OCTOPUS
+Small beast unaligned
+Armor Class 12
+Hit Points 3 (1d6)
+Speed 5 ft. swim 30 ft.
+STR 4 (-3) DEX 15 (+2) CON 11 (+0) INT 3 (-4) WIS 10 (+0) CHA 4 (-3)
+Skills Perception +2 Stealth +4
+Senses darkvision 30 ft. passive Perception 12
+Languages
+Challenge 0 (10 XP)
+Hold Breath. While out of water the octopus can hold its breath for 30 minutes.
+Underwater Camouflage. The octopus has advantage on Dexterity (Stealth) checks made while 
+underwater.
+Water Breathing. The octopus can breathe only underwater.
+ACTIONS
+Tentacles. Melee Weapon Attack: +4 to hit reach 5 ft. one target. Hit: 1 bludgeoning 
+damage and the target is grappled (escape DC 10). Until this grapple ends the octopus cant 
+use its tentacles on another target.
+Ink Cloud (Recharges after a Short or Long Rest). A 5-foot-radius cloud of ink extends all 
+around the octopus if it is underwater. The area is heavily obscured for 1 minute although 
+a significant current can disperse the ink. After releasing the ink the octopus can use 
+the Dash action as a bonus action.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Owl','Beast','Tiny',0,'Unaligned','Monster manual',10,1,11
+,3,13,8,2,12,7,'OWL
+Tiny beast unaligned
+Armor Class 11
+Hit Points 1(1d4 - 1)
+Speed 5 ft. fly 60 ft.
+STR 3 (-4) DEX 13 (+1) CON 8 (-1) INT 2 (-4) WIS 12 (+1) CHA 7 (-2)
+Skills Perception +3 Stealth +3
+Senses darkvision 120 ft. passive Perception 13
+Languages •
+Challenge 0 (10 XP)
+Flyby. The owl doesnt provoke opportunity attacks when it flies out of an enemys reach.
+Keen Hearing and Sight. The owl has advantage on Wisdom (Perception) checks that rely on 
+hearing or sight.
+ACTIONS
+Talons. Melee Weapon Attack: +3 to hit reach 5 ft. one target.
+Hit: 1 slashing damage.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Quipper','Beast','Tiny',0,'Unaligned','Monster manual',10,1,13
+,2,16,9,1,7,2,'QUIPPER
+Tiny beast unaligned
+Armor Class 13
+Hit Points 1 (1d4 - 1)
+Speed 0 ft. swim 40 ft.
+STR 2 (-4) DEX 16 (+3) CON 9 (-1) INT 1 (-5) WIS 7 (-2) CHA 2 (-4)
+Senses darkvision 60 ft. passive Perception 8
+Languages
+Challenge 0 (10 XP)
+Blood Frenzy. The quipper has advantage on melee attack rolls against any creature that 
+doesnt have all its hit points.
+Water Breathing. The quipper can breathe only underwater.
+ACTIONS
+Bite. Melee Weapon Attack: +5 to hit reach 5 ft. one target.
+Hit: 1 piercing damage.
+A quipper is a carnivorous fish with sharp teeth.
+Quippers can adapt to any aquatic environment including cold subterranean lakes. They 
+frequently gather in swarms the statistics for a swarm of quippers appear later in this 
+appendix.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Rat','Beast','Tiny',0,'Unaligned','Monster manual',10,1,10
+,2,11,9,2,10,4,'RAT
+Tiny beast unaligned
+Armor Class 10
+Hit Points 1 (1d4 - 1)
+Speed 20 ft.
+STR 2 (-4) DEX 11 (+0) CON 9 (-1) INT 2(-4)  WIS 10 (+0) CHA 4 (-3)
+Senses darkvision 30 ft. passive Perception 10
+Languages
+Challenge 0 (10 XP)
+Keen Smell. The rat has advantage on Wisdom (Perception) checks that rely on smell.
+ACTIONS
+Bite. Melee Weapon Attack: +0 to hit reach 5 ft. one target.
+Hit: 1 piercing damage.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Raven','Beast','Tiny',0,'Unaligned','Monster manual',10,1,12
+,2,14,8,2,12,6,'RAVEN
+Tiny beast unaligned
+Armor Class 12
+Hit Points 1(1d4 - 1)
+Speed 10 ft. fly 50 ft.
+STR 2 (-4) DEX 14 (+2) CON 8 (-1) INT 2 (-4) WIS 12 (+1) CHA 6 (-2)
+Skills Perception +3
+Senses passive Perception 13
+Languages -
+Challenge 0 (10 XP)
+Mimicry. The raven can mimic simple sounds it has heard such as a person whispering a baby 
+crying or an animal chittering. A creature that hears the sounds can tell they are 
+imitations with a successful DC 10 Wisdom (Insight) check.
+ACTIONS
+Beak. Melee Weapon Attack: +4 to hit reach 5 ft. one target.
+Hit: 1 piercing damage.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Scorpion','Beast','Tiny',0,'Unaligned','Monster manual',10,1,11,2,11,8,1,8,2,'SCORPION
+Tiny beast unaligned
+Armor Class 11 (natural armor)
+Hit Points 1 (1d4 - 1)
+Speed 10 ft.
+STR 2 (-4) DEX 11 (+0) CON 8 (-1) INT 1 (-5) WIS 8 (-1) CHA 2 (-4)
+Senses blindsight 10 ft. passive Perception 9
+Languages
+Challenge 0 (10 XP)
+ACTIONS
+Sting. Melee Weapon Attack: +2 to hit reach 5 ft. one creature.
+Hit: 1 piercing damage and the target must make a DC 9
+Constitution saving throw taking 4 (1d8) poison damage on a failed save or half as much 
+damage on a successful one.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Sea horse','Beast','Tiny',0,'Unaligned','Monster manual',0,1,11
+,1,12,8,1,10,2,'SEA HORSE
+Tiny beast unaligned
+Armor Class 11
+Hit Points 1 (1d4 - 1)
+Speed 0 ft. swim 20 ft.
+STR 1 (-5) DEX 12 (+1) CON 8 (-1) INT 1 (-5) WIS 10 (+0) CHA 2 (-4)
+Senses passive Perception 10
+Languages
+Challenge 0 (0 XP)
+Water Breathing. The sea horse can breathe only underwater.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Shrieker','Plant','Medium',0,'Unaligned','Monster manual',10,13,5
+,1,1,10,1,3,1,'SHRIEKER
+Medium plant unaligned
+Armor Class 5
+Hit Points 13 (3d8)
+Speed 0 ft.
+STR 1 (-5) DEX 1 (-5) CON 10 (+0) INT 1 (-5) WIS 3 (-4) CHA 1 (-5)
+Condition Immunities blinded deafened frightened Senses blindsight 30 ft. (blind beyond 
+this radius) passive Perception 6
+Languages
+Challenge 0 (10 XP)
+False Appearance. While the shrieker remains motionless it is indistinguishable from an 
+ordinary fungus.
+REACTIONS
+Shriek. When bright light or a creature is within 30 feet of the shrieker it emits a 
+shriek audible within 300 feet of it. The shrieker continues to shriek until the 
+disturbance moves out of range and for 1d4 of the shriekers turns afterward.
+);
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Spider','Beast','Tiny',0,'Unaligned','Monster manual',10,1,12
+,2,14,8,1,10,2,'SPIDER
+Tiny beast unaligned
+Armor Class 12
+Hit Points 1 (1d4 - 1)
+Speed 20 ft. climb 20 ft.
+STR 2 (-4) DEX 14 (+2) CON 8 (-1) INT 1 (-5) WIS 10 (+0) CHA 2 (-4)
+Skills Stealth +4
+Senses darkvision 30 ft. passive Perception 10
+Languages
+Challenge 0 (10 XP)
+Spider Climb. The spider can climb difficult surfaces including upside down on ceilings 
+without needing to make an ability check.
+Web Sense. While in contact with a web the spider knows the exact location of any other 
+creature in contact with the same web.
+Web Walker. The spider ignores movement restrictions caused by webbing
+ACTIONS
+Bite. Melee Weapon Attack: +4 to hit reach 5 ft. one creature.
+Hit: 1 piercing damage and the target must succeed on a DC 9
+Constitution saving throw or take 2 (1d4) poison damage.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Vulture','Beast','Medium',0,'Unaligned','Monster manual',10,5,10
+,7,10,13,2,12,4,'VULTURE
+Medium beast unaligned
+Armor Class 10
+Hit Points 5 (1d8 + 1)
+Speed 10 ft. fly 50 ft.
+STR 7 (-2) DEX 10 (+0) CON 13 (+1) INT 2 (-4) WIS 12 (+1) CHA 4 (-3)
+Skills Perception +3
+Senses passive Perception 13
+Languages —
+Challenge 0 (10 XP)
+Keen Sight and Smell. The vulture has advantage on Wisdom (Perception) checks that rely on 
+sight or smell.
+Pack Tactics. The vulture has advantage on an attack roll against a creature if at least 
+one of the vultures allies is within 5 feet of the creature and the ally isnt 
+incapacitated.
+ACTIONS
+Beak. Melee Weapon Attack: +2 to hit reach 5 ft. one target.
+Hit: 2 (1d4) piercing damage.
+');
+
+Insert into Monster(MonsterName, CreatureType, Size, ChallengeRating, Alignment, Sourcebook, Experience, HitPoints, ArmorClass, Strength, Dexterity,Constitution, Intelligence, Wisdom,Charisma, Statblock)Values('Weasel','Beast','Tiny',0,'Unaligned','Monster manual',10,1,13
+,3,16,8,2,12,3,'WEASEL
+Tiny beast unaligned
+Armor Class 13
+Hit Points 1 (1d4 - 1)
+Speed 30 ft.
+STR 3 (-4) DEX 16 (+3) CON 8 (-1) INT 2 (-4) WIS 12 (+1) CHA 3 (-4)
+Skills Perception +3 Stealth +5
+Senses passive Perception 13
+Languages
+Challenge 0 (10 XP)
+Keen Hearing and Smell. The weasel has advantage on Wisdom (Perception) checks that rely 
+on hearing or smell.
+ACTIONS
+Bite. Melee Weapon Attack: +5 to hit reach 5 ft. one target.
+Hit: 1 piercing damage.
+');
