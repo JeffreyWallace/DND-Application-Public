@@ -1047,19 +1047,14 @@ public class DNDEncounterBuilder extends Application
       {
 
          //we need to change how we select the sourcebook see create encounter for how
-         String sourcebook="";
-         ResultSet rs =stmt.executeQuery("SELECT SourceBook FROM MONSTER WHERE MonsterName = '" + encounterNamesUnqiue.get(i) + "'");
-         if (rs.next()) 
-         {
-         sourcebook = rs.getString("SourceBook");
-         }
          sql = "INSERT INTO APPEARS (MonsterName, SourceBook, EncounterName, Amount) VALUES (?, ?, ?, ?)";
-         sqlPop = "INSERT INTO APPEARS (MonsterName, SourceBook, EncounterName, Amount) VALUES ('" + encounterNamesUnqiue.get(i) + "', '" + sourcebook + "', '" + encounterName.getText() + "', " + amountofMonsters.get(i) + ")";
+         String name=encounterNamesUnqiue.get(i).substring(0,encounterNamesUnqiue.get(i).indexOf("..."));
+         String sourceBook=encounterNamesUnqiue.get(i).substring(encounterNamesUnqiue.get(i).indexOf("...")+3);
+         sqlPop = "INSERT INTO APPEARS (MonsterName, SourceBook, EncounterName, Amount) VALUES ('" + name + "', '" + sourceBook + "', '" + encounterName.getText() + "', " + amountofMonsters.get(i) + ")";
          pstmt = connection.prepareStatement(sql);
-         pstmt.setString(1, encounterNamesUnqiue.get(i));
-         pstmt.setString(2, sourcebook);
+         pstmt.setString(1, name );
+         pstmt.setString(2,sourceBook );
          pstmt.setString(3, encounterName.getText());
-         //the line below is confusing me does it just set the amount of monsters to the total amount???
          pstmt.setInt(4, amountofMonsters.get(i));
          pstmt.executeUpdate();
          try {
